@@ -42,11 +42,8 @@ public class FizzBuzz {
         
         Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
         
-        r.ifPresent(consumer);
-        
-        return (r % 2 == 1) ? 
-                            :
-                            ;
+        return r.map(s -> (number % 2 == 1) ? "fake " + s
+                                            : s);
     }
 
     private static String fb(Integer number) {
