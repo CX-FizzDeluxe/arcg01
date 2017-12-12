@@ -8,7 +8,7 @@ public class FizzBuzzTest {
 
     @Test
     public void test() {
- 
+        
         
         assertTrue(FizzBuzz.allDigitsIdentical("111111"));
         assertFalse(FizzBuzz.allDigitsIdentical("1110111"));
@@ -18,5 +18,12 @@ public class FizzBuzzTest {
         assertTrue(FizzBuzz.isDeluxe(111));
         assertFalse(FizzBuzz.isDeluxe(112));
     }
-
+    
+    @Test
+    public void test2() {
+ 
+        
+        assertEquals("fizz", FizzBuzz.fizzBuzz(13));
+    }
+    
 }
