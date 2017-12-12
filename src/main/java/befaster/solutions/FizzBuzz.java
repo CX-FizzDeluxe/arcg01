@@ -20,16 +20,14 @@ public class FizzBuzz {
              
             String fb = fb(number);
             
+            Optional<String> deluxeStr = deluxeStr(number);
+            
             if (fb != null) {
                 
-                Optional<String> deluxeStr = deluxeStr(number);
-                
-                return fb + (deluxeStr.isPresent() ? " " + deluxeStr.get() : "");
+                return fb + (deluxeStr.isPresent() ? " " + deluxeStr.get() : ""); // map +_orElse?
             }
             else 
             {
-                Optional<String> deluxeStr = deluxeStr(number);
-                
                 return deluxeStr.orElse(number.toString());
                 
 //                return isDeluxe(number) ? "deluxe" : number.toString();
