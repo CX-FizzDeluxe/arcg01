@@ -24,7 +24,7 @@ public class FizzBuzz {
                 
                 Optional<String> deluxeStr = deluxeStr(number);
                 
-                return fb + (deluxeStr != null ? " " + deluxeStr : "");
+                return fb + (deluxeStr.isPresent() ? " " + deluxeStr.get() : "");
             }
             else 
             {
