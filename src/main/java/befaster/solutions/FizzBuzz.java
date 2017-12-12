@@ -14,10 +14,18 @@ public class FizzBuzz {
         
         
         
-             if (isFizz(number) && isBuzz(number)) return "fizz buzz";
+             if (isFizz(number) && isBuzz(number) && isDeluxe(number)) return "fizz buzz deluxe";
+        else if (isFizz(number) && isBuzz(number)) return "fizz buzz";
         else if (isFizz(number)) return "fizz";
         else if (isBuzz(number)) return "buzz";
         else return number.toString();
+    }
+
+    private static boolean isDeluxe(Integer number) {
+        
+        // A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
+        
+        return number > 10 || number.toString().contains("3");
     }
 
     private static boolean isBuzz(Integer number) {
