@@ -1,5 +1,7 @@
 package befaster.solutions;
 
+import java.util.Optional;
+
 import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzz {
@@ -32,9 +34,9 @@ public class FizzBuzz {
 
     private static String deluxeStr(Integer number) {
         
+        Optional<String>.of("");
         
-        
-        return isDeluxe(number) ? "deluxe" : null;
+        return isDeluxe(number) ? ; // of() "deluxe" : null;
     }
 
     private static String fb(Integer number) {
