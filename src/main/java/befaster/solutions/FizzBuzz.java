@@ -28,8 +28,8 @@ public class FizzBuzz {
             }
             else 
             {
-                return deluxeStr.orElse(number.toString()); // ??
-//                return number.toString(); // or this?
+//                return deluxeStr.orElse(number.toString()); // ??
+                return number.toString(); // or this?
                 
 //                return isDeluxe(number) ? "deluxe" : number.toString();
             }
