@@ -77,8 +77,8 @@ public class FizzBuzz {
     
     static boolean isDeluxe(Integer number) {
         
-        return (isFizz(number) && number.toString().contains("3"))
-            || (isBuzz(number) && number.toString().contains("5"))
+        return (number % 3 == 0 && number.toString().contains("3"))
+            || (number % 5 == 0 && number.toString().contains("5"))
             ;
     }
 
