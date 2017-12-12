@@ -15,7 +15,17 @@ public class FizzBuzz {
         
         
 //             if (isFizz(number) && isBuzz(number) && isDeluxe(number)) return "fizz buzz deluxe";
-             return fb(number) + (isDeluxe(number) ? " deluxe" : "");
+             
+            String fb = fb(number);
+            
+            if (fb != null) {
+                
+                return fb + (isDeluxe(number) ? " deluxe" : "");
+            }
+            else 
+            {
+                return isDeluxe(number) ? "deluxe" : number.toString();
+            }
     }
 
     private static String fb(Integer number) {
