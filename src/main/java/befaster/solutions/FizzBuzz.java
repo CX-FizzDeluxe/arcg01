@@ -46,9 +46,9 @@ public class FizzBuzz {
 
     private static String fb(Integer number) {
         
-            if (isFizz(number) && isBuzz(number)) return "fizz buzz";
-          else if (isFizz(number)) return "fizz";
-          else if (isBuzz(number)) return "buzz";
+               if (isFizz(number) && isBuzz(number)) return "fizz buzz deluxe";
+          else if (isFizz(number)) return "fizz deluxe";
+          else if (isBuzz(number)) return "buzz deluxe";
     //        else if (isDeluxe(number)) return "deluxe";
           else return null;
     }
