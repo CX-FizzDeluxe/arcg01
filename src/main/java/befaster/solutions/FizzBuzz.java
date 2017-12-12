@@ -35,29 +35,29 @@ public class FizzBuzz {
             }
     }
 
-//    private static Optional<String> deluxeStr(Integer number) {
-//        
-//        //   - If a "deluxe" number is odd, we should call him "fake deluxe"
-//        
-//        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
-//        
-//        return r.map(s -> (number % 2 == 1) ? "fake " + s
-//                : s);
-//    }
-    
     private static Optional<String> deluxeStr(Integer number) {
         
-        // odd -> "fake deluxe" 
-        // _   -> "deluxe"
+        //   - If a "deluxe" number is odd, we should call him "fake deluxe"
         
-//        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
         
-        String r = (number % 2 == 1) ? "fake deluxe"
-                                     : "deluxe"
-                                     ;
-        
-        return Optional.of(r);
+        return r.map(s -> (number % 2 == 1) ? "fake " + s
+                : s);
     }
+    
+//    private static Optional<String> deluxeStr(Integer number) {
+//        
+//        // odd -> "fake deluxe" 
+//        // _   -> "deluxe"
+//        
+//        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+//        
+//        return  (number % 2 == 1) ? "fake deluxe"
+//                                     : "deluxe"
+//                                     ;
+//        
+//        return Optional.of(r);
+//    }
 
     private static String fb(Integer number) {
         
@@ -91,11 +91,11 @@ public class FizzBuzz {
     }
 
     private static boolean isBuzz(Integer number) {
-        return number % 5 == 0  || number.toString().contains("5");
+        return number % 5 == 0  && number.toString().contains("5");
     }
 
     private static boolean isFizz(Integer number) {
-        return number % 3 == 0 || number.toString().contains("3");
+        return number % 3 == 0 && number.toString().contains("3");
     }
 
 }
