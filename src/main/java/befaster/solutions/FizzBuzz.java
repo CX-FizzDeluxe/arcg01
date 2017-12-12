@@ -40,7 +40,13 @@ public class FizzBuzz {
         
         //   - If a "deluxe" number is odd, we should call him "fake deluxe"
         
-        return isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+        
+        r.ifPresent(consumer);
+        
+        return (r % 2 == 1) ? 
+                            :
+                            ;
     }
 
     private static String fb(Integer number) {
