@@ -14,18 +14,18 @@ public class FizzBuzz {
         
         
         
-             if (multipleOf3(number) && multipleOf5(number)) return "fizz buzz";
-        else if (multipleOf3(number)) return "fizz";
-        else if (multipleOf5(number)) return "buzz";
+             if (isFizz(number) && isBuzz(number)) return "fizz buzz";
+        else if (isFizz(number)) return "fizz";
+        else if (isBuzz(number)) return "buzz";
         else return number.toString();
     }
 
-    private static boolean multipleOf5(Integer number) {
-        return number % 5 == 0;
+    private static boolean isBuzz(Integer number) {
+        return number % 5 == 0  || number.toString().contains("5");
     }
 
-    private static boolean multipleOf3(Integer number) {
-        return number % 3 == 0;
+    private static boolean isFizz(Integer number) {
+        return number % 3 == 0 || number.toString().contains("3");
     }
 
 }
