@@ -20,7 +20,9 @@ public class FizzBuzz {
             
             if (fb != null) {
                 
-                return fb + deluxeStr(number);
+                String deluxeStr = deluxeStr(number);
+                
+                return fb + (deluxeStr != null ? " " + deluxeStr : "");
             }
             else 
             {
@@ -30,7 +32,9 @@ public class FizzBuzz {
 
     private static String deluxeStr(Integer number) {
         
-        return isDeluxe(number) ? " deluxe" : "";
+        
+        
+        return isDeluxe(number) ? "deluxe" : null;
     }
 
     private static String fb(Integer number) {
