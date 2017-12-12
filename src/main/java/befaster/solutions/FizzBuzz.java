@@ -41,8 +41,20 @@ public class FizzBuzz {
 //        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
 //        
 //        return r.map(s -> (number % 2 == 1) ? "fake " + s
-//                                            : s);
+//                : s);
 //    }
+    
+    private static Optional<String> deluxeStr(Integer number) {
+        
+        // odd -> "fake deluxe" 
+        // _   -> "deluxe"
+        
+        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+        
+        return (number % 2 == 1) ? "fake deluxe"
+                                 : "deluxe"
+                                 ;
+    }
 
     private static String fb(Integer number) {
         
