@@ -18,6 +18,7 @@ public class FizzBuzz {
         else if (isFizz(number) && isBuzz(number)) return "fizz buzz";
         else if (isFizz(number)) return "fizz";
         else if (isBuzz(number)) return "buzz";
+        else if (isDeluxe(number)) return "deluxe";
         else return number.toString();
     }
 
