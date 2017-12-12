@@ -28,11 +28,17 @@ public class FizzBuzz {
             }
             else 
             {
-                return isDeluxe(number) ? "deluxe" : number.toString();
+                Optional<String> deluxeStr = deluxeStr(number);
+                
+                return deluxeStr.orElse(number.toString());
+                
+//                return isDeluxe(number) ? "deluxe" : number.toString();
             }
     }
 
     private static Optional<String> deluxeStr(Integer number) {
+        
+        //   - If a "deluxe" number is odd, we should call him "fake deluxe"
         
         return isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
     }
