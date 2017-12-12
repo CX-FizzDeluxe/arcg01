@@ -98,11 +98,11 @@ public class FizzBuzz {
     }
 
     private static boolean isBuzz(Integer number) {
-        return number % 5 == 0;
+        return number % 5 == 0 || number.toString().contains("5");
     }
 
     private static boolean isFizz(Integer number) {
-        return number % 3 == 0;
+        return number % 3 == 0 || number.toString().contains("3");
     }
 
 }
