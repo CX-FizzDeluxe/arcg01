@@ -49,11 +49,13 @@ public class FizzBuzz {
         // odd -> "fake deluxe" 
         // _   -> "deluxe"
         
-        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+//        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
         
-        return (number % 2 == 1) ? "fake deluxe"
-                                 : "deluxe"
-                                 ;
+        String r = (number % 2 == 1) ? "fake deluxe"
+                                     : "deluxe"
+                                     ;
+        
+        return Optional.of(r);
     }
 
     private static String fb(Integer number) {
