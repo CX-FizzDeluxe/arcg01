@@ -21,23 +21,26 @@ public class FizzBuzz {
         else return number.toString();
     }
 
-    private static boolean isDeluxe(Integer number) {
+    static boolean isDeluxe(Integer number) {
         
         // A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
         
         return number > 10 || allDigitsIdentical(number.toString());
     }
 
-    private static boolean allDigitsIdentical(String number) {
+    static boolean allDigitsIdentical(String number) {
 
         char first = number.charAt(0);
         
-        number.chars()
+        for (int i=1; i< number.length(); i++) {
+            
+            if (number.charAt(i) != first) {
+                
+                return false;
+            }
+        }
         
-        
-        
-        
-        return false;
+        return true;
     }
 
     private static boolean isBuzz(Integer number) {
