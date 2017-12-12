@@ -14,9 +14,9 @@ public class FizzBuzz {
         
         
         
-             if (multipleOf3(number)) return "fizz";
+             if (multipleOf3(number) && multipleOf5(number)) return "fizz buzz";
+        else if (multipleOf3(number)) return "fizz";
         else if (multipleOf5(number)) return "buzz";
-        else if (multipleOf3(number) && multipleOf5(number)) return "fizz buzz";
         else return number.toString();
     }
 
