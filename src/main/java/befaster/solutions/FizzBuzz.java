@@ -42,7 +42,7 @@ public class FizzBuzz {
         Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
         
         return r.map(s -> (number % 2 == 1) ? "fake " + s
-                : s);
+                                            : s);
     }
     
 //    private static Optional<String> deluxeStr(Integer number) {
@@ -68,11 +68,18 @@ public class FizzBuzz {
           else return null;
     }
 
+//    static boolean isDeluxe(Integer number) {
+//        
+//        // A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
+//        
+//        return number > 10 && allDigitsIdentical(number.toString());
+//    }
+    
     static boolean isDeluxe(Integer number) {
         
-        // A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
-        
-        return number > 10 && allDigitsIdentical(number.toString());
+        return (isFizz(number) && number.toString().contains("3"))
+            || (isBuzz(number) && number.toString().contains("5"))
+            ;
     }
 
     static boolean allDigitsIdentical(String number) {
@@ -91,11 +98,11 @@ public class FizzBuzz {
     }
 
     private static boolean isBuzz(Integer number) {
-        return number % 5 == 0  && number.toString().contains("5");
+        return number % 5 == 0;
     }
 
     private static boolean isFizz(Integer number) {
-        return number % 3 == 0 && number.toString().contains("3");
+        return number % 3 == 0;
     }
 
 }
