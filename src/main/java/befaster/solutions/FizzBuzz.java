@@ -25,7 +25,7 @@ public class FizzBuzz {
         
         // A number is considered to be "deluxe" if it is greater than 10 and all the digits are identical
         
-        return number > 10 || allDigitsIdentical(number.toString());
+        return number > 10 && allDigitsIdentical(number.toString());
     }
 
     static boolean allDigitsIdentical(String number) {
