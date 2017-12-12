@@ -5,6 +5,6 @@ import befaster.runner.SolutionNotImplementedException;
 public class Hello {
     public static String hello(String friendName) {
         
-        return "Hello!";
+        return "Hello, World!";
     }
 }
