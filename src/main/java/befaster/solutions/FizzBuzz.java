@@ -5,7 +5,14 @@ import befaster.runner.SolutionNotImplementedException;
 public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
-        throw new SolutionNotImplementedException();
+        
+        String r = "";
+        
+        if (number % 3 == 0) r += "fizz";
+        if (number % 5 == 0) r += "buzz";
+        
+        
+        
     }
 
 }
