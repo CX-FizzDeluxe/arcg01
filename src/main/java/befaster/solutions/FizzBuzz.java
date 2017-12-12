@@ -34,21 +34,21 @@ public class FizzBuzz {
             }
     }
 
-    private static Optional<String> deluxeStr(Integer number) {
-        
-        //   - If a "deluxe" number is odd, we should call him "fake deluxe"
-        
-        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
-        
-        return r.map(s -> (number % 2 == 1) ? "fake " + s
-                                            : s);
-    }
+//    private static Optional<String> deluxeStr(Integer number) {
+//        
+//        //   - If a "deluxe" number is odd, we should call him "fake deluxe"
+//        
+//        Optional<String> r = isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
+//        
+//        return r.map(s -> (number % 2 == 1) ? "fake " + s
+//                                            : s);
+//    }
 
     private static String fb(Integer number) {
         
-               if (isFizz(number) && isBuzz(number)) return "fizz buzz deluxe";
-          else if (isFizz(number)) return "fizz deluxe";
-          else if (isBuzz(number)) return "buzz deluxe";
+               if (isFizz(number) && isBuzz(number)) return "fizz buzz";
+          else if (isFizz(number)) return "fizz";
+          else if (isBuzz(number)) return "buzz";
     //        else if (isDeluxe(number)) return "deluxe";
           else return null;
     }
