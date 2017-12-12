@@ -20,12 +20,17 @@ public class FizzBuzz {
             
             if (fb != null) {
                 
-                return fb + (isDeluxe(number) ? " deluxe" : "");
+                return fb + deluxeStr(number);
             }
             else 
             {
                 return isDeluxe(number) ? "deluxe" : number.toString();
             }
+    }
+
+    private static String deluxeStr(Integer number) {
+        
+        return isDeluxe(number) ? " deluxe" : "";
     }
 
     private static String fb(Integer number) {
