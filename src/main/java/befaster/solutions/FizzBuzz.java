@@ -14,12 +14,17 @@ public class FizzBuzz {
         
         
         
-             if (isFizz(number) && isBuzz(number) && isDeluxe(number)) return "fizz buzz deluxe";
-        else if (isFizz(number) && isBuzz(number)) return "fizz buzz";
-        else if (isFizz(number)) return "fizz";
-        else if (isBuzz(number)) return "buzz";
-        else if (isDeluxe(number)) return "deluxe";
-        else return number.toString();
+//             if (isFizz(number) && isBuzz(number) && isDeluxe(number)) return "fizz buzz deluxe";
+             return fb(number) + (isDeluxe(number) ? " deluxe" : "");
+    }
+
+    private static String fb(Integer number) {
+        
+            if (isFizz(number) && isBuzz(number)) return "fizz buzz";
+          else if (isFizz(number)) return "fizz";
+          else if (isBuzz(number)) return "buzz";
+    //        else if (isDeluxe(number)) return "deluxe";
+          else return number.toString();
     }
 
     static boolean isDeluxe(Integer number) {
