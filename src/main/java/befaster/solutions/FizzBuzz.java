@@ -22,7 +22,7 @@ public class FizzBuzz {
             
             if (fb != null) {
                 
-                String deluxeStr = deluxeStr(number);
+                Optional<String> deluxeStr = deluxeStr(number);
                 
                 return fb + (deluxeStr != null ? " " + deluxeStr : "");
             }
@@ -32,11 +32,9 @@ public class FizzBuzz {
             }
     }
 
-    private static String deluxeStr(Integer number) {
+    private static Optional<String> deluxeStr(Integer number) {
         
-        Optional<String>.of("");
-        
-        return isDeluxe(number) ? ; // of() "deluxe" : null;
+        return isDeluxe(number) ? Optional.of("deluxe") : Optional.empty();
     }
 
     private static String fb(Integer number) {
